@@ -37,12 +37,12 @@ const showForm = () => {
                             </div>
                         </div>
                     </div>`;
-
   renderToDOM('#sorting-form', content);
+  document.querySelector('#student-name').addEventListener('keyup', addStudentToArray);
 };
 
 const addStudentToArray = (e) => {
-  if (e.target.id === 'sort') {
+  if (e.target.id === 'sort' || e.keyCode === 13) {
     const student = document.querySelector('#student-name');
     errorMessage(student.value);
 
