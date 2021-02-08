@@ -38,7 +38,7 @@ const showForm = () => {
                         </div>
                     </div>`;
   renderToDOM('#sorting-form', content);
-  document.querySelector('#student-name').addEventListener('keyup', addStudentToArray);
+  document.querySelector('#student-name').addEventListener('keyup', addStudentToArray); // this could have easily been accomplished by using a form tag instead of using separate form elements as form submits on enter key press also
 };
 
 const addStudentToArray = (e) => {
