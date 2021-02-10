@@ -65,16 +65,9 @@ const sortingHat = () => {
   return sortingHat;
 };
 
+
 const sortStudentsByHouse = (array) => {
-  return array.sort((a, b) =>
-    a.house > b.house
-      ? 1
-      : a.house === b.house
-      ? a.name > b.name
-        ? 1
-        : -1
-      : -1
-  );
+  return array.sort((a, b) => a.house > b.house ? 1 : -1);
 };
 
 const cardCreator = (divId, array) => {
@@ -115,11 +108,10 @@ const errorMessage = (student) => {
   if (student) {
     document.querySelector('#error-message').innerHTML = '';
   } else {
-    document.querySelector(
-      '#error-message'
-    ).innerHTML = `<div style="color: red;margin-bottom: 10px;">
-            <b>Please type a name</b>
-        </div>`;
+    document.querySelector('#error-message').innerHTML = `
+      <div style="color: red;margin-bottom: 10px;">
+        <b>Please type a name</b>
+      </div>`;
   }
 };
 
